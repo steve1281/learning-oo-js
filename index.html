@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <script src="index.js"></script>
     <p>
         <ul>
         <li>encapsulation - bringing behaviours (methods) and attributes (data) into objects.</li>
@@ -16,5 +17,110 @@
         </ul>
 
     </p>
+    <p>
+        <ul>
+            <li>ECMAScript 6/2015 - JavaScript conforms to .</li>
+
+        </ul>
+    </p>
+    <p>
+        Value Types
+        <ul>
+            <li>Number</li>
+            <li>String</li>
+            <li>Boolean</li>
+            <li>Symbol</li>
+            <li>undefined</li>
+            <li>null</li>
+        </ul>
+        Reference Types
+        <ul>
+            <li>Object</li>
+            <li>Function</li>
+            <li>Array</li>
+        </ul>
+    </p>
+    <p>
+        Example of a setter/getter:
+        <pre>   
+            Object.defineProperty(this, 'defaultLocation', { 
+                get: function() { 
+                    return defaultLocation;
+                },
+                set: function(value) {
+                    if (!value.x || !value.y)
+                         throw new Error("Invalid location value passed.");
+                    defaultLocation = value;
+                }
+            });
+        </pre>
+    </p>
+    <p>
+        Stop watch excercise
+        <ul>
+            <li>sw=new Stopwatch();</li>
+            <li>stop, start, reset, duration</li>
+            <li>initially, duration is 0</li>
+            <li>calling start when already running, error</li>
+            <li>calling stop when not running, error</li>
+            <li>calling reset stops and resets everything</li>
+        </ul>
+    </p>
+    <script src="stopwatch.js"></script>
+    <p>
+        Inheritance:classical vs prototypical
+        <pre>
+        how to do this with objects ?
+        circle == isa ==> shape
+        "prototype is a parent"
+        every object has a prototype
+        imagine there is a "objectBase" that everything inherits
+        circle ==> shape ==> objectBase
+        all objects have grandfather of objectBase
+        objects created by same constructor will have same prototype
+    </pre>
+    </p>
+    <script src="properties.js"></script>
+    <p><pre>
+        Properties have attributes
+        configurable - can delete
+        enumberable - comes out in Object.keys()
+        writeable - can be assigned values
+        </pre>
+    </p>
+    <script src="prototype_methods.js"></script>
+    <p>
+        <pre>
+            see example, but you move from object instance to a global method (associated with class) called prototype
+            its an optimization, used when you have many instances of an object.
+            
+
+        </pre>
+    </p>
+    <script src="stopwatch2.js"></script>
+    <p>
+        stop watch version 2: prototype
+        <pre>
+            point of this excerise is to show how abstraction
+            can be lost; have a look at the examples
+
+        </pre>
+    </p>
+    <script src="shapes.js"></script>
+    <p>
+        your own inheritance.
+    <img src="prototypes.png">
+        <pre>
+        
+    </pre>    
+    </p>
+    <script src="compositions.js"></script>
+    <p>
+        compositions
+        <pre>
+
+        </pre>
+    </p>
+    on 37 ...
 </body>
 </html>
